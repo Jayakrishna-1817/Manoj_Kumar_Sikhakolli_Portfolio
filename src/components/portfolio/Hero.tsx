@@ -42,7 +42,8 @@ export function Hero() {
               <img 
                 src="profile.png" 
                 alt="Manoj Kumar Sikhakolli" 
-                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover pt-4 pb-0"
+                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover"
+                style={{ objectPosition: "50% 25%" }}
               />
             </div>
           </motion.div>
@@ -115,36 +116,36 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.95 }}
-              className="mt-8 flex flex-wrap gap-3 justify-center"
+              className="mt-8 flex flex-wrap gap-2 justify-center"
             >
               <a
                 href="/Manoj_Kumar_Sikhakolli_Resume.pdf"
                 download="Manoj_Kumar_Sikhakolli_Resume.pdf"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
+                className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-3 py-2 text-xs font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
               >
-                <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
+                <Download className="h-3 w-3 transition-transform duration-100 group-hover:-translate-y-1" /> Resume
               </a>
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 rounded-full glass-strong px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                className="inline-flex items-center gap-1.5 rounded-full glass-strong px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
-                View Projects <ArrowDown className="h-4 w-4 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
+                Projects <ArrowDown className="h-3 w-3 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
               </a>
               <a
                 href="https://calendly.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+                className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
               >
-                <Calendar className="h-4 w-4 transition-transform duration-100 hover:rotate-12" /> Schedule Discussion
+                <Calendar className="h-3 w-3 transition-transform duration-100 hover:rotate-12" /> Schedule
               </a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+                className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
               >
-                <Mail className="h-4 w-4 transition-transform duration-100 hover:scale-125" /> Contact Me
+                <Mail className="h-3 w-3 transition-transform duration-100 hover:scale-125" /> Contact
               </a>
             </motion.div>
 
@@ -243,36 +244,36 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
-              className="mt-8 flex flex-wrap gap-3 justify-start"
+              className="mt-8 flex flex-wrap gap-2 justify-start"
             >
               <a
                 href="/Manoj_Kumar_Sikhakolli_Resume.pdf"
                 download="Manoj_Kumar_Sikhakolli_Resume.pdf"
-                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
+                className="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-3 py-2 text-xs font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
               >
-                <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
+                <Download className="h-3 w-3 transition-transform duration-100 group-hover:-translate-y-1" /> Resume
               </a>
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 rounded-full glass-strong px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                className="inline-flex items-center gap-1.5 rounded-full glass-strong px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
               >
-                View Projects <ArrowDown className="h-4 w-4 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
+                Projects <ArrowDown className="h-3 w-3 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
               </a>
               <a
                 href="https://calendly.com/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+                className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
               >
-                <Calendar className="h-4 w-4 transition-transform duration-100 hover:rotate-12" /> Schedule Discussion
+                <Calendar className="h-3 w-3 transition-transform duration-100 hover:rotate-12" /> Schedule
               </a>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+                className="inline-flex items-center gap-1.5 rounded-full glass px-3 py-2 text-xs font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
               >
-                <Mail className="h-4 w-4 transition-transform duration-100 hover:scale-125" /> Contact Me
+                <Mail className="h-3 w-3 transition-transform duration-100 hover:scale-125" /> Contact
               </a>
             </motion.div>
           </div>
@@ -291,7 +292,8 @@ export function Hero() {
                 <img 
                   src="profile.png" 
                   alt="Manoj Kumar Sikhakolli" 
-                  className="w-80 h-80 object-cover pt-6 pb-0"
+                  className="w-80 h-80 object-cover"
+                  style={{ objectPosition: "50% 15%" }}
                 />
               </div>
             </motion.div>
