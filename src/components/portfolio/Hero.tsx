@@ -42,7 +42,7 @@ export function Hero() {
               <img 
                 src="profile.png" 
                 alt="Manoj Kumar Sikhakolli" 
-                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover pt-8 pb-0"
+                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover pt-4 pb-0"
               />
             </div>
           </motion.div>
@@ -78,10 +78,10 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.65 }}
-              className="mt-5 flex h-12 items-center justify-center gap-3 text-lg text-white/80 md:text-xl"
+              className="mt-5 flex items-center justify-center gap-3 text-lg text-white/80 md:text-xl"
             >
-              <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125" />
-              <div className="relative h-full w-full overflow-hidden">
+              <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125 flex-shrink-0" />
+              <div className="relative h-12 w-full overflow-hidden flex items-center">
                 {roles.map((r, idx) => (
                   <motion.div
                     key={r}
@@ -95,7 +95,7 @@ export function Hero() {
                     {r}
                   </motion.div>
                 ))}
-                <span className="invisible flex items-center h-full">{roles[0]}</span>
+                <span className="invisible flex items-center">{roles[0]}</span>
               </div>
             </motion.div>
 
@@ -206,10 +206,10 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="mt-5 flex h-12 items-start gap-3 text-xl text-white/80"
+              className="mt-5 flex items-center gap-3 text-xl text-white/80"
             >
-              <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125" />
-              <div className="relative h-full w-full overflow-hidden">
+              <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125 flex-shrink-0" />
+              <div className="relative h-12 w-full overflow-hidden flex items-center">
                 {roles.map((r, idx) => (
                   <motion.div
                     key={r}
@@ -223,7 +223,7 @@ export function Hero() {
                     {r}
                   </motion.div>
                 ))}
-                <span className="invisible flex items-center h-full">{roles[0]}</span>
+                <span className="invisible flex items-center">{roles[0]}</span>
               </div>
             </motion.div>
 
@@ -291,7 +291,7 @@ export function Hero() {
                 <img 
                   src="profile.png" 
                   alt="Manoj Kumar Sikhakolli" 
-                  className="w-80 h-80 object-cover pt-10 pb-0"
+                  className="w-80 h-80 object-cover pt-6 pb-0"
                 />
               </div>
             </motion.div>
