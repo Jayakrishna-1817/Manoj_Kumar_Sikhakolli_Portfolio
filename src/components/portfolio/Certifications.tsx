@@ -1,16 +1,47 @@
 import { motion } from "framer-motion";
-import { Award, Code, Database, Headphones, Zap, Users, Star } from "lucide-react";
 import { Section, SectionHeader } from "./Section";
 
 const certs = [
-  { t: "Platform Developer I", c: "#00D4FF", icon: Code },
-  { t: "JavaScript Developer I", c: "#FFD166", icon: Code },
-  { t: "Sales Cloud Consultant", c: "#00FFB2", icon: Users },
-  { t: "Service Cloud Consultant", c: "#FF6B9D", icon: Headphones },
-  { t: "Salesforce Administrator", c: "#00D4FF", icon: Zap },
-  { t: "AI Specialist", c: "#7B61FF", icon: Star },
-  { t: "AI Associate", c: "#7B61FF", icon: Star },
-  { t: "Data Cloud Consultant", c: "#00FFB2", icon: Database },
+  { 
+    t: "Platform Developer I", 
+    c: "#00D4FF", 
+    img: "/cert-platform-developer.png" // Replace with your actual image
+  },
+  { 
+    t: "JavaScript Developer I", 
+    c: "#FFD166", 
+    img: "/cert-javascript-developer.png" // Replace with your actual image
+  },
+  { 
+    t: "Sales Cloud Consultant", 
+    c: "#00FFB2", 
+    img: "/cert-sales-cloud.png" // Replace with your actual image
+  },
+  { 
+    t: "Service Cloud Consultant", 
+    c: "#FF6B9D", 
+    img: "/cert-service-cloud.png" // Replace with your actual image
+  },
+  { 
+    t: "Salesforce Administrator", 
+    c: "#00D4FF", 
+    img: "/cert-admin.png" // Replace with your actual image
+  },
+  { 
+    t: "AI Specialist", 
+    c: "#7B61FF", 
+    img: "/cert-ai-specialist.png" // Replace with your actual image
+  },
+  { 
+    t: "AI Associate", 
+    c: "#7B61FF", 
+    img: "/cert-ai-associate.png" // Replace with your actual image
+  },
+  { 
+    t: "Data Cloud Consultant", 
+    c: "#00FFB2", 
+    img: "/cert-data-cloud.png" // Replace with your actual image
+  },
 ];
 
 export function Certifications() {
@@ -31,7 +62,7 @@ export function Certifications() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.06, duration: 0.5 }}
             whileHover={{ y: -10, scale: 1.05, rotateZ: 2 }}
-            className="group relative aspect-[4/5] overflow-hidden rounded-2xl glass p-5 transition-all duration-100 hover:shadow-[0_0_50px_rgba(0,212,255,0.15)]"
+            className="group relative overflow-hidden rounded-2xl glass p-5 transition-all duration-100 hover:shadow-[0_0_50px_rgba(0,212,255,0.15)]"
             style={{ perspective: 800 }}
           >
             <motion.div
@@ -40,27 +71,30 @@ export function Certifications() {
                 background: `radial-gradient(circle at 50% 0%, ${c.c}44, transparent 70%)`,
               }}
             />
-            <div className="flex h-full flex-col justify-between">
-              <div className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
-                Salesforce Certified
+            <div className="flex h-full flex-col justify-between gap-4">
+              {/* Top: Certification Image */}
+              <div className="w-full">
+                <div className="aspect-[4/3] overflow-hidden rounded-xl border-2" style={{ borderColor: c.c }}>
+                  <img 
+                    src={c.img} 
+                    alt={c.t} 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
               </div>
-              <div className="flex flex-col items-center">
-                <motion.div
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  className="grid h-20 w-20 place-items-center rounded-xl transition-all duration-100"
-                  style={{
-                    background: `linear-gradient(135deg, ${c.c}, ${c.c}66)`,
-                    boxShadow: `0 8px 30px ${c.c}55`,
-                  }}
-                >
-                  <c.icon className="h-10 w-10 text-[#050816]" />
-                </motion.div>
-                <div className="mt-4 font-display text-base font-semibold leading-tight text-white text-center">
+              
+              {/* Bottom: Certification Name */}
+              <div className="mt-auto">
+                <div className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-1">
+                  Salesforce Certified
+                </div>
+                <div className="font-display text-base font-semibold leading-tight text-white">
                   {c.t}
                 </div>
               </div>
+
               <div
-                className="mt-3 h-px w-full transition-all duration-100 group-hover:h-1.5"
+                className="mt-2 h-px w-full transition-all duration-100 group-hover:h-1.5"
                 style={{
                   background: `linear-gradient(90deg, transparent, ${c.c}, transparent)`,
                 }}

@@ -75,23 +75,23 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Mobile Photo Circle */}
-      <div className="pointer-events-none absolute left-1/2 top-28 z-30 -translate-x-1/2 lg:hidden">
-        <div className="h-36 w-36 overflow-hidden rounded-full border-3 border-[#00D4FF] shadow-[0_0_30px_rgba(0,212,255,0.6)]">
+      {/* Mobile Photo Circle - Adjusted position */}
+      <div className="pointer-events-none absolute left-1/2 top-32 z-30 -translate-x-1/2 lg:hidden">
+        <div className="h-32 w-32 overflow-hidden rounded-full border-3 border-[#00D4FF] shadow-[0_0_30px_rgba(0,212,255,0.6)]">
           <img 
             src="profile.png" 
             alt="Manoj Kumar Sikhakolli" 
-            className="h-full w-full object-cover translate-y-1"
+            className="h-full w-full object-cover translate-y-0"
           />
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105"
+          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105 mt-24 lg:mt-0"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inset-0 animate-ping rounded-full bg-[#00FFB2] opacity-75" />
@@ -157,12 +157,11 @@ export function Hero() {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com&su=Request%20Resume&body=Hi%20Manoj,%0A%0AI%20would%20like%20to%20request%20your%20resume."
-            target="_blank"
-            rel="noreferrer"
+            href="/Manoj_Kumar_Sikhakolli_Resume.docx"
+            download="Manoj_Kumar_Sikhakolli_Resume.docx"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
           >
-            <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Request Resume
+            <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
           </a>
           <a
             href="#work"
