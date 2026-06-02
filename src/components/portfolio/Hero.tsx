@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Calendar, Download, Mail, Sparkles } from "lucide-react";
-import resumeAsset from "@/assets/resume.asset.json";
 
 const roles = [
   "Salesforce Consultant",
@@ -77,7 +76,7 @@ export function Hero() {
       </div>
 
       {/* Mobile Photo Circle */}
-      <div className="pointer-events-none absolute right-4 top-28 z-30 lg:hidden">
+      <div className="pointer-events-none absolute left-1/2 top-28 z-30 -translate-x-1/2 lg:hidden">
         <div className="h-36 w-36 overflow-hidden rounded-full border-3 border-[#00D4FF] shadow-[0_0_30px_rgba(0,212,255,0.6)]">
           <img 
             src="profile.png" 
@@ -107,9 +106,11 @@ export function Hero() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="font-display mt-6 text-4xl font-bold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-[88px] transition-all duration-100 hover:text-white/95"
         >
-          Manoj Kumar
-          <br />
-          <span className="text-gradient transition-all duration-500 hover:scale-[1.02] inline-block">Sikhakolli</span>
+          <a href="https://www.linkedin.com/in/manoj1252" target="_blank" rel="noreferrer" className="hover:opacity-90 transition-opacity">
+            Manoj Kumar
+            <br />
+            <span className="text-gradient transition-all duration-500 hover:scale-[1.02] inline-block">Sikhakolli</span>
+          </a>
         </motion.h1>
 
         <motion.div
@@ -156,11 +157,12 @@ export function Hero() {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href={resumeAsset.url}
-            download="Manoj_Kumar_Sikhakolli_Resume.docx"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com&su=Request%20Resume&body=Hi%20Manoj,%0A%0AI%20would%20like%20to%20request%20your%20resume."
+            target="_blank"
+            rel="noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
           >
-            <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
+            <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Request Resume
           </a>
           <a
             href="#work"

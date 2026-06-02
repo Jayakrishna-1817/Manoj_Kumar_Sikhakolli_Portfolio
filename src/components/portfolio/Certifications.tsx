@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+import { Award, Code, Database, Headphones, Zap, Users, Star } from "lucide-react";
 import { Section, SectionHeader } from "./Section";
 
 const certs = [
-  { t: "Platform Developer I", c: "#00D4FF" },
-  { t: "JavaScript Developer I", c: "#FFD166" },
-  { t: "Sales Cloud Consultant", c: "#00FFB2" },
-  { t: "Service Cloud Consultant", c: "#FF6B9D" },
-  { t: "Salesforce Administrator", c: "#00D4FF" },
-  { t: "AI Specialist", c: "#7B61FF" },
-  { t: "AI Associate", c: "#7B61FF" },
-  { t: "Data Cloud Consultant", c: "#00FFB2" },
+  { t: "Platform Developer I", c: "#00D4FF", icon: Code },
+  { t: "JavaScript Developer I", c: "#FFD166", icon: Code },
+  { t: "Sales Cloud Consultant", c: "#00FFB2", icon: Users },
+  { t: "Service Cloud Consultant", c: "#FF6B9D", icon: Headphones },
+  { t: "Salesforce Administrator", c: "#00D4FF", icon: Zap },
+  { t: "AI Specialist", c: "#7B61FF", icon: Star },
+  { t: "AI Associate", c: "#7B61FF", icon: Star },
+  { t: "Data Cloud Consultant", c: "#00FFB2", icon: Database },
 ];
 
 export function Certifications() {
@@ -40,22 +40,22 @@ export function Certifications() {
                 background: `radial-gradient(circle at 50% 0%, ${c.c}44, transparent 70%)`,
               }}
             />
-            <div className="flex h-full flex-col">
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 5 }}
-                className="grid h-14 w-14 place-items-center rounded-xl transition-all duration-100"
-                style={{
-                  background: `linear-gradient(135deg, ${c.c}, ${c.c}66)`,
-                  boxShadow: `0 8px 30px ${c.c}55`,
-                }}
-              >
-                <Award className="h-7 w-7 text-[#050816]" />
-              </motion.div>
-              <div className="mt-auto">
-                <div className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
-                  Salesforce Certified
-                </div>
-                <div className="mt-1 font-display text-base font-semibold leading-tight text-white">
+            <div className="flex h-full flex-col justify-between">
+              <div className="text-[10px] font-semibold uppercase tracking-widest text-white/40">
+                Salesforce Certified
+              </div>
+              <div className="flex flex-col items-center">
+                <motion.div
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  className="grid h-20 w-20 place-items-center rounded-xl transition-all duration-100"
+                  style={{
+                    background: `linear-gradient(135deg, ${c.c}, ${c.c}66)`,
+                    boxShadow: `0 8px 30px ${c.c}55`,
+                  }}
+                >
+                  <c.icon className="h-10 w-10 text-[#050816]" />
+                </motion.div>
+                <div className="mt-4 font-display text-base font-semibold leading-tight text-white text-center">
                   {c.t}
                 </div>
               </div>
