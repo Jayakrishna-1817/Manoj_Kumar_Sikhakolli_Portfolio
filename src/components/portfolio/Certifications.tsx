@@ -5,42 +5,42 @@ const certs = [
   { 
     t: "Platform Developer I", 
     c: "#00D4FF", 
-    img: "/cert-platform-developer.png" // Replace with your actual image
+    img: "PD1.jpg"
   },
   { 
     t: "JavaScript Developer I", 
     c: "#FFD166", 
-    img: "/cert-javascript-developer.png" // Replace with your actual image
+    img: "JD1.jpg" // Replace with your actual image
   },
   { 
     t: "Sales Cloud Consultant", 
     c: "#00FFB2", 
-    img: "/cert-sales-cloud.png" // Replace with your actual image
+    img: "SCC.png" // Replace with your actual image
   },
   { 
     t: "Service Cloud Consultant", 
     c: "#FF6B9D", 
-    img: "/cert-service-cloud.png" // Replace with your actual image
+    img: "SCC1.jpg" // Replace with your actual image
   },
   { 
     t: "Salesforce Administrator", 
     c: "#00D4FF", 
-    img: "/cert-admin.png" // Replace with your actual image
+    img: "SCS.jpg" // Replace with your actual image
   },
   { 
     t: "AI Specialist", 
     c: "#7B61FF", 
-    img: "/cert-ai-specialist.png" // Replace with your actual image
+    img: "AIS.jpg" // Replace with your actual image
   },
   { 
     t: "AI Associate", 
     c: "#7B61FF", 
-    img: "/cert-ai-associate.png" // Replace with your actual image
+    img: "AIA.jpg" // Replace with your actual image
   },
   { 
     t: "Data Cloud Consultant", 
     c: "#00FFB2", 
-    img: "/cert-data-cloud.png" // Replace with your actual image
+    img: "DCC.jpg" // Replace with your actual image
   },
 ];
 
@@ -62,7 +62,7 @@ export function Certifications() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.06, duration: 0.5 }}
             whileHover={{ y: -10, scale: 1.05, rotateZ: 2 }}
-            className="group relative overflow-hidden rounded-2xl glass p-5 transition-all duration-100 hover:shadow-[0_0_50px_rgba(0,212,255,0.15)]"
+            className="group relative overflow-hidden rounded-2xl glass p-5 transition-all duration-100 hover:shadow-[0_0_50px_rgba(0,212,255,0.15)] flex flex-col"
             style={{ perspective: 800 }}
           >
             <motion.div
@@ -71,20 +71,20 @@ export function Certifications() {
                 background: `radial-gradient(circle at 50% 0%, ${c.c}44, transparent 70%)`,
               }}
             />
-            <div className="flex h-full flex-col justify-between gap-4">
-              {/* Top: Certification Image */}
-              <div className="w-full">
-                <div className="aspect-[4/3] overflow-hidden rounded-xl border-2" style={{ borderColor: c.c }}>
+            <div className="flex flex-col h-full justify-between gap-4 flex-grow">
+              {/* Top: Certification Image Container - Fixed Height & Consistent */}
+              <div className="w-full flex-shrink-0">
+                <div className="w-full h-48 overflow-hidden rounded-xl border-2 flex items-center justify-center bg-white/5" style={{ borderColor: c.c }}>
                   <img 
                     src={c.img} 
                     alt={c.t} 
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="max-w-full max-h-full object-contain p-2 transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
               </div>
               
               {/* Bottom: Certification Name */}
-              <div className="mt-auto">
+              <div className="mt-auto flex-shrink-0">
                 <div className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-1">
                   Salesforce Certified
                 </div>
@@ -94,7 +94,7 @@ export function Certifications() {
               </div>
 
               <div
-                className="mt-2 h-px w-full transition-all duration-100 group-hover:h-1.5"
+                className="mt-2 h-px w-full transition-all duration-100 group-hover:h-1.5 flex-shrink-0"
                 style={{
                   background: `linear-gradient(90deg, transparent, ${c.c}, transparent)`,
                 }}
