@@ -178,7 +178,9 @@ export function Hero() {
             <Calendar className="h-4 w-4 transition-transform duration-100 hover:rotate-12" /> Schedule Discussion
           </a>
           <a
-            href="mailto:s.manojkumar447@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
           >
             <Mail className="h-4 w-4 transition-transform duration-100 hover:scale-125" /> Contact Me
