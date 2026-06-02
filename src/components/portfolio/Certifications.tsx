@@ -10,37 +10,42 @@ const certs = [
   { 
     t: "JavaScript Developer I", 
     c: "#FFD166", 
-    img: "JD1.jpg" // Replace with your actual image
+    img: "JD1.jpg"
   },
   { 
     t: "Sales Cloud Consultant", 
     c: "#00FFB2", 
-    img: "SCC.png" // Replace with your actual image
+    img: "SCC.png"
   },
   { 
     t: "Service Cloud Consultant", 
     c: "#FF6B9D", 
-    img: "SCC1.jpg" // Replace with your actual image
+    img: "SCC1.jpg"
   },
   { 
     t: "Salesforce Administrator", 
     c: "#00D4FF", 
-    img: "SCS.jpg" // Replace with your actual image
+    img: "SCS.jpg"
   },
   { 
     t: "AI Specialist", 
     c: "#7B61FF", 
-    img: "AIS.jpg" // Replace with your actual image
+    img: "AIS.jpg"
   },
   { 
     t: "AI Associate", 
     c: "#7B61FF", 
-    img: "AIA.jpg" // Replace with your actual image
+    img: "AIA.jpg"
   },
   { 
     t: "Data Cloud Consultant", 
     c: "#00FFB2", 
-    img: "DCC.jpg" // Replace with your actual image
+    img: "DCC.jpg"
+  },
+  { 
+    t: "Revenue Cloud Consultant", 
+    c: "#FF9F1C", 
+    img: "RCC.png"
   },
 ];
 
@@ -50,7 +55,7 @@ export function Certifications() {
       <SectionHeader
         eyebrow="Certification Wall"
         title={<>Credentialed across the <span className="text-gradient">Salesforce stack</span></>}
-        description="Eight Salesforce certifications spanning development, administration, consulting and AI."
+        description="Nine Salesforce certifications spanning development, administration, consulting and AI."
       />
 
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
