@@ -76,7 +76,7 @@ export function Hero() {
       </div>
 
       {/* Mobile Photo Circle - Adjusted position */}
-      <div className="pointer-events-none absolute left-1/2 top-32 z-30 -translate-x-1/2 lg:hidden">
+      <div className="pointer-events-none absolute left-1/2 top-24 z-30 -translate-x-1/2 lg:hidden">
         <div className="h-32 w-32 overflow-hidden rounded-full border-3 border-[#00D4FF] shadow-[0_0_30px_rgba(0,212,255,0.6)]">
           <img 
             src="profile.png" 
@@ -86,12 +86,12 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:pt-20">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:pt-20 pt-48">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105 mt-24 lg:mt-0"
+          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105"
         >
           <span className="relative flex h-2 w-2">
             <span className="absolute inset-0 animate-ping rounded-full bg-[#00FFB2] opacity-75" />
