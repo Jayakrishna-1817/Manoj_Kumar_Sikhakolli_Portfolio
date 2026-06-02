@@ -42,7 +42,7 @@ export function Hero() {
               <img 
                 src="profile.png" 
                 alt="Manoj Kumar Sikhakolli" 
-                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover object-center"
+                className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 object-cover pt-8 pb-0"
               />
             </div>
           </motion.div>
@@ -291,7 +291,7 @@ export function Hero() {
                 <img 
                   src="profile.png" 
                   alt="Manoj Kumar Sikhakolli" 
-                  className="w-80 h-80 object-cover object-center"
+                  className="w-80 h-80 object-cover pt-10 pb-0"
                 />
               </div>
             </motion.div>
