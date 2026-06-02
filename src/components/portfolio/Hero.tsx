@@ -26,135 +26,139 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative flex min-h-[100svh] w-full items-center overflow-hidden pt-28 pb-16">
-      {/* Photo Circle for desktop */}
-      <div className="pointer-events-none absolute right-[50px] top-1/2 hidden -translate-y-1/2 lg:block">
-        <div className="h-56 w-56 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#00D4FF] shadow-[0_0_40px_rgba(0,212,255,0.6)] transition-all duration-100 hover:scale-105 hover:border-[#00FFB2] hover:shadow-[0_0_60px_rgba(0,255,178,0.8)]">
-          <img 
-            src="profile.png" 
-            alt="Manoj Kumar Sikhakolli" 
-            className="h-full w-full object-cover object-top"
-          />
-        </div>
-      </div>
+    <section id="top" className="relative flex min-h-[100svh] w-full items-center overflow-hidden pt-24 pb-16">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          {/* Left - Content */}
+          <div className="flex-1 text-center lg:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inset-0 animate-ping rounded-full bg-[#00FFB2] opacity-75" />
+                <span className="relative h-2 w-2 rounded-full bg-[#00FFB2]" />
+              </span>
+              Available for Salesforce roles · Hyderabad / Remote
+            </motion.div>
 
-      {/* Mobile Photo Circle - Adjusted position */}
-      <div className="pointer-events-none absolute left-1/2 top-24 z-30 -translate-x-1/2 lg:hidden">
-        <div className="h-32 w-32 overflow-hidden rounded-full border-3 border-[#00D4FF] shadow-[0_0_30px_rgba(0,212,255,0.6)]">
-          <img 
-            src="profile.png" 
-            alt="Manoj Kumar Sikhakolli" 
-            className="h-full w-full object-cover translate-y-0"
-          />
-        </div>
-      </div>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.8 }}
+              className="font-display mt-6 text-4xl font-bold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-[72px] transition-all duration-100 hover:text-white/95"
+            >
+              <a href="https://www.linkedin.com/in/manoj1252" target="_blank" rel="noreferrer" className="hover:opacity-90 transition-opacity">
+                Manoj Kumar
+                <br />
+                <span className="text-gradient transition-all duration-500 hover:scale-[1.02] inline-block">Sikhakolli</span>
+              </a>
+            </motion.h1>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 lg:pt-20 pt-48">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-white/80 transition-all duration-100 hover:bg-white/10 hover:scale-105"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inset-0 animate-ping rounded-full bg-[#00FFB2] opacity-75" />
-            <span className="relative h-2 w-2 rounded-full bg-[#00FFB2]" />
-          </span>
-          Available for Salesforce roles · Hyderabad / Remote
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6 }}
+              className="mt-5 flex h-12 items-center justify-center lg:justify-start gap-3 text-lg text-white/80 md:text-xl"
+            >
+              <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125" />
+              <div className="relative h-full w-full overflow-hidden">
+                {roles.map((r, idx) => (
+                  <motion.div
+                    key={r}
+                    animate={{
+                      y: `${(idx - i) * 100}%`,
+                      opacity: idx === i ? 1 : 0.3,
+                    }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    className="absolute inset-0 whitespace-nowrap font-medium text-white flex items-center justify-center lg:justify-start"
+                  >
+                    {r}
+                  </motion.div>
+                ))}
+                <span className="invisible flex items-center h-full">{roles[0]}</span>
+              </div>
+            </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.8 }}
-          className="font-display mt-6 text-4xl font-bold leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-[88px] transition-all duration-100 hover:text-white/95"
-        >
-          <a href="https://www.linkedin.com/in/manoj1252" target="_blank" rel="noreferrer" className="hover:opacity-90 transition-opacity">
-            Manoj Kumar
-            <br />
-            <span className="text-gradient transition-all duration-500 hover:scale-[1.02] inline-block">Sikhakolli</span>
-          </a>
-        </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.75 }}
+              className="mt-6 max-w-2xl mx-auto lg:mx-0 text-base leading-relaxed text-white/65 md:text-lg"
+            >
+              Salesforce Consultant at <span className="text-white font-medium">Deloitte</span> building
+              enterprise-grade solutions across Sales, Service, Experience & Data Cloud — with deep
+              focus on <span className="text-[#00FFB2] font-medium">Agentforce</span>, AI automation and complex
+              integrations.
+            </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-5 flex h-12 items-center gap-3 text-lg text-white/80 md:text-xl"
-        >
-          <Sparkles className="h-4 w-4 text-[#00D4FF] transition-transform duration-100 hover:rotate-12 hover:scale-125" />
-          <div className="relative h-full w-full overflow-hidden">
-            {roles.map((r, idx) => (
-              <motion.div
-                key={r}
-                animate={{
-                  y: `${(idx - i) * 100}%`,
-                  opacity: idx === i ? 1 : 0.3,
-                }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="absolute inset-0 whitespace-nowrap font-medium text-white flex items-center"
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+              className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start"
+            >
+              <a
+                href="/Manoj_Kumar_Sikhakolli_Resume.pdf"
+                download="Manoj_Kumar_Sikhakolli_Resume.pdf"
+                className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
               >
-                {r}
-              </motion.div>
-            ))}
-            <span className="invisible flex items-center h-full">{roles[0]}</span>
+                <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
+              </a>
+              <a
+                href="#work"
+                className="inline-flex items-center gap-2 rounded-full glass-strong px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+              >
+                View Projects <ArrowDown className="h-4 w-4 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
+              </a>
+              <a
+                href="https://calendly.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+              >
+                <Calendar className="h-4 w-4 transition-transform duration-100 hover:rotate-12" /> Schedule Discussion
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
+              >
+                <Mail className="h-4 w-4 transition-transform duration-100 hover:scale-125" /> Contact Me
+              </a>
+            </motion.div>
           </div>
-        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.75 }}
-          className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 md:text-lg"
-        >
-          Salesforce Consultant at <span className="text-white font-medium">Deloitte</span> building
-          enterprise-grade solutions across Sales, Service, Experience &amp; Data Cloud — with deep
-          focus on <span className="text-[#00FFB2] font-medium">Agentforce</span>, AI automation and complex
-          integrations.
-        </motion.p>
+          {/* Right - Image */}
+          <div className="flex-1 flex justify-center lg:justify-end">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="relative"
+            >
+              <div className="absolute -inset-4 rounded-full border border-[#00D4FF]/30 opacity-50" />
+              <div className="absolute -inset-8 rounded-full border border-[#7B61FF]/20 opacity-30" />
+              <div className="relative overflow-hidden rounded-full border-4 border-[#00D4FF] shadow-[0_0_50px_rgba(0,212,255,0.5)] transition-all duration-100 hover:border-[#00FFB2] hover:shadow-[0_0_70px_rgba(0,255,178,0.7)]">
+                <img 
+                  src="profile.png" 
+                  alt="Manoj Kumar Sikhakolli" 
+                  className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
-          className="mt-8 flex flex-wrap gap-3"
-        >
-          <a
-            href="/Manoj_Kumar_Sikhakolli_Resume.pdf"
-            download="Manoj_Kumar_Sikhakolli_Resume.pdf"
-            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
-          >
-            <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
-          </a>
-          <a
-            href="#work"
-            className="inline-flex items-center gap-2 rounded-full glass-strong px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]"
-          >
-            View Projects <ArrowDown className="h-4 w-4 -rotate-45 transition-transform duration-100 hover:-translate-y-1" />
-          </a>
-          <a
-            href="https://calendly.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
-          >
-            <Calendar className="h-4 w-4 transition-transform duration-100 hover:rotate-12" /> Schedule Discussion
-          </a>
-          <a
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=s.manojkumar447@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold text-white transition-all duration-100 hover:bg-white/15 hover:scale-105"
-          >
-            <Mail className="h-4 w-4 transition-transform duration-100 hover:scale-125" /> Contact Me
-          </a>
-        </motion.div>
-
+        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.1 }}
-          className="mt-14 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-4"
+          className="mt-16 grid max-w-3xl mx-auto grid-cols-2 gap-3 sm:grid-cols-4"
         >
           {stats.map((s, idx) => (
             <motion.div
@@ -169,15 +173,6 @@ export function Hero() {
               <div className="mt-1 text-[11px] uppercase tracking-wider text-white/55">{s.l}</div>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
-
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40">
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ArrowDown className="h-5 w-5" />
         </motion.div>
       </div>
     </section>
