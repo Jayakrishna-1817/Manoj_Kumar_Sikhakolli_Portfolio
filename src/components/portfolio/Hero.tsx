@@ -157,8 +157,8 @@ export function Hero() {
           className="mt-8 flex flex-wrap gap-3"
         >
           <a
-            href="/Manoj_Kumar_Sikhakolli_Resume.docx"
-            download="Manoj_Kumar_Sikhakolli_Resume.docx"
+            href="/Manoj_Kumar_Sikhakolli_Resume.pdf"
+            download="Manoj_Kumar_Sikhakolli_Resume.pdf"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#00D4FF] to-[#7B61FF] px-5 py-3 text-sm font-semibold text-[#050816] shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-100 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,212,255,0.7)]"
           >
             <Download className="h-4 w-4 transition-transform duration-100 group-hover:-translate-y-1" /> Download Resume
