@@ -12,8 +12,8 @@ const roles = [
 ];
 
 const stats = [
-  { v: "5+", l: "Years Experience" },
-  { v: "8", l: "Certifications" },
+  { v: "5.5+", l: "Years Experience" },
+  { v: "9", l: "Certifications" },
   { v: "50+", l: "Solutions Delivered" },
   { v: "30%+", l: "Efficiency Gains" },
 ];
@@ -27,51 +27,14 @@ export function Hero() {
 
   return (
     <section id="top" className="relative flex min-h-[100svh] w-full items-center overflow-hidden pt-28 pb-16">
-      {/* Rotating globe / orb & Photo Circle */}
+      {/* Photo Circle for desktop */}
       <div className="pointer-events-none absolute right-[50px] top-1/2 hidden -translate-y-1/2 lg:block">
-        <div className="relative h-[560px] w-[560px]">
-          <div className="absolute inset-0 rounded-full border border-[#00D4FF]/20 animate-spin-slow" />
-          <div
-            className="absolute inset-8 rounded-full border border-[#7B61FF]/20"
-            style={{ animation: "spin-slow 40s linear infinite reverse" }}
+        <div className="h-56 w-56 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#00D4FF] shadow-[0_0_40px_rgba(0,212,255,0.6)] transition-all duration-100 hover:scale-105 hover:border-[#00FFB2] hover:shadow-[0_0_60px_rgba(0,255,178,0.8)]">
+          <img 
+            src="profile.png" 
+            alt="Manoj Kumar Sikhakolli" 
+            className="h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-20 rounded-full border border-[#00FFB2]/20 animate-spin-slow" />
-          <div
-            className="absolute inset-0 rounded-full opacity-70"
-            style={{
-              background:
-                "radial-gradient(circle at 35% 35%, rgba(0,212,255,0.5), rgba(123,97,255,0.3) 40%, transparent 70%)",
-              filter: "blur(20px)",
-            }}
-          />
-          {/* Photo Circle */}
-          <div className="absolute left-1/2 top-1/2 z-20 h-56 w-56 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#00D4FF] shadow-[0_0_40px_rgba(0,212,255,0.6)] transition-all duration-100 hover:scale-105 hover:border-[#00FFB2] hover:shadow-[0_0_60px_rgba(0,255,178,0.8)]">
-            <img 
-              src="profile.png" 
-              alt="Manoj Kumar Sikhakolli" 
-              className="h-full w-full object-cover object-top"
-            />
-          </div>
-          {/* orbiting dots */}
-          {[0, 1, 2, 3, 4].map((d) => (
-            <div
-              key={d}
-              className="absolute top-1/2 left-1/2"
-              style={{
-                ["--orbit-r" as string]: `${180 + d * 40}px`,
-                animation: `orbit ${10 + d * 4}s linear infinite`,
-              }}
-            >
-              <div
-                className="h-3 w-3 rounded-full"
-                style={{
-                  background: d % 2 ? "#7B61FF" : "#00D4FF",
-                  boxShadow: "0 0 16px currentColor",
-                  color: d % 2 ? "#7B61FF" : "#00D4FF",
-                }}
-              />
-            </div>
-          ))}
         </div>
       </div>
 
@@ -97,7 +60,7 @@ export function Hero() {
             <span className="absolute inset-0 animate-ping rounded-full bg-[#00FFB2] opacity-75" />
             <span className="relative h-2 w-2 rounded-full bg-[#00FFB2]" />
           </span>
-          Available for senior Salesforce roles · Hyderabad / Remote
+          Available for Salesforce roles · Hyderabad / Remote
         </motion.div>
 
         <motion.h1
@@ -144,7 +107,7 @@ export function Hero() {
           transition={{ delay: 0.75 }}
           className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 md:text-lg"
         >
-          Senior Salesforce Consultant at <span className="text-white font-medium">Deloitte</span> building
+          Salesforce Consultant at <span className="text-white font-medium">Deloitte</span> building
           enterprise-grade solutions across Sales, Service, Experience &amp; Data Cloud — with deep
           focus on <span className="text-[#00FFB2] font-medium">Agentforce</span>, AI automation and complex
           integrations.

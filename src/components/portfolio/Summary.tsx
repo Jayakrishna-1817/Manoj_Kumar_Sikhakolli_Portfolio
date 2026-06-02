@@ -20,7 +20,7 @@ export function Summary() {
             <span className="text-gradient">Salesforce &amp; AI</span>
           </>
         }
-        description="5+ years delivering enterprise-grade solutions across Sales Cloud, Service Cloud, Experience Cloud, Data Cloud and Agentforce — solving ambiguous problems with intelligent automation, integrations and AI-powered workflows."
+        description="5.5+ years delivering enterprise-grade solutions across Sales Cloud, Service Cloud, Experience Cloud, Data Cloud and Agentforce — solving ambiguous problems with intelligent automation, integrations and AI-powered workflows."
       />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
