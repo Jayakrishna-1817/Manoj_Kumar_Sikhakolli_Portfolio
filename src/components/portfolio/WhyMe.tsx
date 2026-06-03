@@ -75,8 +75,8 @@ export function WhyMe() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </div> */}
+        </div> */}
+      </div> 
     </Section>
   );
 }
