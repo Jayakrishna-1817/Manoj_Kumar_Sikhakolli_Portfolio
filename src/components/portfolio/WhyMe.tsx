@@ -4,11 +4,9 @@ import { Section, SectionHeader } from "./Section";
 
 const leadership = [
   "Business Consulting",
-  "Solution Architecture",
   "Client Communication",
   "Stakeholder Management",
   "Technical Leadership",
-  "Enterprise Transformation",
   "Problem Solving",
   "System Design",
 ];
@@ -57,7 +55,7 @@ export function WhyMe() {
           </div>
         </div>
 
-        <div className="rounded-3xl glass p-7 transition-all duration-100 hover:shadow-[0_0_40px_rgba(0,255,178,0.1)]">
+        {/* <div className="rounded-3xl glass p-7 transition-all duration-100 hover:shadow-[0_0_40px_rgba(0,255,178,0.1)]">
           <h3 className="font-display text-xl font-semibold text-white">Why recruiters shortlist Manoj</h3>
           <div className="mt-5 space-y-2">
             {reasons.map((r, i) => (
@@ -78,7 +76,7 @@ export function WhyMe() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }
