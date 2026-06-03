@@ -8,7 +8,6 @@ const roles = [
   "Data Cloud Consultant",
   "AI Solutions Engineer",
   "Integration Expert",
-  "Solution Architect",
 ];
 
 const stats = [
